@@ -1,4 +1,4 @@
-/*Styling for all pages*/
+/* Styling for all pages */
 :root {
   --link-color: #007064;
   --link-color-visited: #05676e;
@@ -14,14 +14,17 @@ body {
   font-size: 17px;
   line-height: 1.6;
 }
+
 * {
   box-sizing: border-box;
 }
+
 .page-header_item {
   height: 50px;
   width: 400px;
   margin-left: 15px;
 }
+
 .page-header {
   display: flex;
   width: 100%;
@@ -29,114 +32,141 @@ body {
   clear: both;
   align-items: center;
 }
+
 .page-header_item {
     flex: 0 1 200px;
 }
+
 .page-header_item:last-child {
   flex-grow: 1;
   text-align: right;
 }
+
 .navigation-list {
   list-style-type: none;
 }
+
+
 .navigation-list li {
   display: inline-block;
   margin-left: 15px;
 }
+
 .navigation-list_item-active {
   text-decoration: none;
 }
+
 h1 {
   font-size: 30px;
   font-weight: 700;
 }
+
 h2 {
   font-size: 24px;
   font-weight: 700;
 }
+
 h3 {
   font-size: 18px;
   font-weight: 700;
 }
+
 a {
   color: var(--link-color);
 }
+
 a:visited {
   color: var(--link-color-visited);
 }
+
 a:hover, a:focus {
   text-decoration: none;
 }
+
 a:active {
   color: var(--link-color-active);
 }
+
 button {
-  /*overwrites browser defaults and resets the border*/
+  /* overwrites browser defaults and resets the border */
   border: none;
-  /*takes the font from the outer container*/
+  /* takes the font from the outer container */
   font-family: inherit;
-  /*styles the background color, font color, and text decoration (underline, etc.) of the button*/
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   background-color: var(--button-color);
   color: var(--button-textcolor);
   text-decoration: none;
-  /*adds spacing to the button*/
+  /* adds spacing to the button */
   padding: 10px;
   border-radius: 3px;
-  /*gives the button a bottom border with a width of 2px, a type of  solid, and a color in rgba format*/
+  /* gives the button a bottom border with a width of 2px, a type of  solid, and a color in rgba format */
   border-bottom: 2px solid rgba (0,0,0,0.3);
 }
+
 button:hover, button:focus {
   /*lets the mouse appear as a hand when hovering over the button}*/
   cursor: pointer;
   /*reduces the opacity of the button to 80%*/
   opacity: 0.8;
 }
+
 .page-footer {
   clear: both;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-/*Styling for index.html page*/
+
+/* Styling for index.html page */
 .profile__portrait {
   float: left;
   width: 350px;
   margin-right: 40px;
   border-radius: 50%
 }
+
 .profile {
   max-width: 700px;
   margin: 0 auto;
 }
-/*styling for about.html*/
+
+/* styling for about.html */
 .about-me {
   max-width: 750px;
   margin: 0 auto;
   text-align: center;
 }
+
 .about-table {
   margin: 0 auto;
 }
+
 .about-ul {
   list-style-type: none;
 }
+
 @keyframes color-change {
   0% {
     fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
 }
+
 .sun {
   animation: 4s color-change infinite alternate linear;
 }
+
 .cloud-front {
   animation: 30s cloud-move infinite alternate linear;
 }
+
 @keyframes cloud-move {
   from {
     transform: translate(0,50px);
@@ -145,6 +175,7 @@ button:hover, button:focus {
     transform: translate(200px, 50px);
   }
 }
+
 @keyframes cloud-move-reverse {
   from {
     transform: translate(446px, 48px);
@@ -153,37 +184,45 @@ button:hover, button:focus {
     transform: translate(100px, 48px);
   }
 }
+
 .cloud-back {
   animation: 43s cloud-move-reverse infinite alternate linear;
 }
-/*Styling for work.html page*/
+
+/* Styling for work.html page */
 .grid-class {
   max-width: 900px;
   margin: 0 auto;
 }
+
 .grid {
   display: grid;
-
   grid-template-columns: 300px 300px 300px;
   grid-gap: 20px;
 }
+
 .grid_item {
   background-color: var(--grid-item-color);
   text-align: center;
 }
+
 .work {
   text-align: center;
 }
-/*Styling for contact.html page */
+
+/* Styling for contact.html page */
 .contact {
   text-align: center;
 }
+
 .contact_info {
   text-align: center;
 }
+
 .form {
   text-align: center;
 }
+
 .button, button {
   border: none;
   display: inline-block;
@@ -198,6 +237,7 @@ button:hover, button:focus {
   transition-duration: 0.2s;
   transition-property: opacity;
 }
+
 button:hover,
 button:focus,
 .button:hover,
@@ -205,29 +245,31 @@ button:focus,
   cursor: pointer;
   opacity: 0.8;
 }
+
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
   }
 }
+
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
-  /*Shared code*/
+  /* Shared code */
   .grid {
     grid-gap: 10px;
   }
+
   .grid_item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
 }
-
-
-
